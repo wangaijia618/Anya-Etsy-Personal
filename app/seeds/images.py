@@ -278,7 +278,7 @@ def seed_images():
 
   #-----------spring-festival-----------
   product41_image1 = Image(
-      url="https://img.alicdn.com/imgextra/i4/23670720/O1CN016cTlCZ1HBnuEYti9l_!!23670720.jpg",
+      url="https://m.media-amazon.com/images/I/81xg0TF+tcL._AC_SX522_.jpg",
       product_id=41)
 
   product41_image2 = Image(
