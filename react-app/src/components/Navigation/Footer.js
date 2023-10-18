@@ -19,7 +19,7 @@ const Footer = () => {
             <div className='socials-inner'>
               <div><i className="fa-brands fa-github"></i></div>
               <div>
-                <a href='https://github.com/andreazwu/anya-etsy.git' className="social-link" target="_blank" >Project Repo</a>
+                <a href='https://github.com/wangaijia618/Anya-Etsy-Personal' className="social-link" target="_blank" >Project Repo</a>
               </div>
             </div>
             <div className='socials-inner'>
