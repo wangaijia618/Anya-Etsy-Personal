@@ -322,6 +322,13 @@ def seed_reviews():
 # TRUNCATE Removes all the data from the table, and RESET IDENTITY
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
+# def undo_reviews():
+#     db.session.execute('TRUNCATE reviews RESTART IDENTITY CASCADE;')
+#     db.session.commit()
 def undo_reviews():
-    db.session.execute('TRUNCATE reviews RESTART IDENTITY CASCADE;')
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.reviews RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM reviews")
+
     db.session.commit()
