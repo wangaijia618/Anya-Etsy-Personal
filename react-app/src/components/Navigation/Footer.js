@@ -49,7 +49,7 @@ const Footer = () => {
               <div>
                 <a href='https://github.com/andreazwu' className="social-link" target="_blank">Andrea Wu</a>
               </div> */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
