@@ -444,6 +444,13 @@ def seed_products():
 # TRUNCATE Removes all the data from the table, and RESET IDENTITY
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
+# def undo_products():
+#     db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
+#     db.session.commit()
 def undo_products():
-    db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.products RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM products")
+
     db.session.commit()
